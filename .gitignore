@@ -1,0 +1,5 @@
+﻿
+# Qt local files
+*.qbs.user
+build/
+
