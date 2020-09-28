@@ -19,11 +19,4 @@ CppApplication {
     cpp.cxxLanguageVersion: "c++17"
 
 
-    Properties {
-        // MinGW fails with tests
-        condition: qbs.toolchain.contains("mingw")
-        cpp.cxxFlags: outer.concat("-fno-lto")
-//        cpp.cxxFlags: outer.concat("-fuse-ld=lld")
-
-    }
 }
