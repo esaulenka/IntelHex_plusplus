@@ -378,7 +378,7 @@ void IntelHex::write_hex_file(std::ostream &file, bool write_start_addr, uint32_
 					for ( ; i < chain_len; i++)
 						bin[4 + i] = buf.at(cur_addr + i);
 				}
-				catch (out_of_range)
+				catch (const out_of_range &)
 				{
 					// we catch a hole so we should shrink the chain
 					chain_len = i;
